@@ -1,11 +1,5 @@
-import { Button } from "@/components/ui/button";
+import { redirect } from "next/navigation";
 
-const Page = () => {
-  return (
-    <div>
-      <Button>Hello</Button>
-    </div>
-  );
-};
-
-export default Page;
+export default function HomePage() {
+  redirect("/sign-in");
+}
