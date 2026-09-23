@@ -11,6 +11,7 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
+  trustedOrigins: ["https://*-taesu.vercel.app", "https://better-auth-vercel-botid.vercel.app"],
   plugins: [
     // captcha({
     //   provider: "vercel-botid",
