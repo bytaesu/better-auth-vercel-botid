@@ -128,11 +128,7 @@ export function SignUpForm() {
 
       {rootError && (
         <Alert variant="destructive">
-          <AlertTitle>
-            {rootError.type === "VERIFICATION_FAILED"
-              ? "BotID rejected the request"
-              : "Sign-up failed"}
-          </AlertTitle>
+          <AlertTitle>Sign-up failed</AlertTitle>
           <AlertDescription>{rootError.message}</AlertDescription>
         </Alert>
       )}

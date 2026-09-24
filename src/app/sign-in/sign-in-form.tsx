@@ -105,11 +105,7 @@ export function SignInForm() {
 
       {rootError && (
         <Alert variant="destructive">
-          <AlertTitle>
-            {rootError.type === "VERIFICATION_FAILED"
-              ? "BotID rejected the request"
-              : "Sign-in failed"}
-          </AlertTitle>
+          <AlertTitle>Sign-in failed</AlertTitle>
           <AlertDescription>{rootError.message}</AlertDescription>
         </Alert>
       )}
