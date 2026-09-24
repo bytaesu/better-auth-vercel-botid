@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { CodeBlock } from "@/components/code-block";
 import { buttonVariants } from "@/components/ui/button";
@@ -75,7 +75,7 @@ const tryItFile = {
 
 export default function Page() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-20 sm:px-6 sm:py-28">
+    <main className="mx-auto w-full min-w-0 max-w-5xl px-4 py-20 sm:px-6 sm:py-28">
       <header className="mx-auto flex max-w-xl flex-col items-center gap-5 text-center">
         <h1 className="text-2xl font-semibold tracking-tight text-balance sm:text-5xl">
           Better Auth × Vercel BotID
@@ -85,16 +85,27 @@ export default function Page() {
           sophisticated bots without showing visible challenges or requiring
           user action.
         </p>
-        <div className="flex gap-2">
-          <Link href="/sign-up" className={buttonVariants()}>
-            Try sign up
-          </Link>
-          <Link
-            href="/sign-in"
-            className={buttonVariants({ variant: "outline" })}
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link href="/sign-up" className={buttonVariants()}>
+              Try sign up
+            </Link>
+            <Link
+              href="/sign-in"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Try sign in
+            </Link>
+          </div>
+          <a
+            href="https://better-auth.com/docs/plugins/captcha#vercel-botid"
+            target="_blank"
+            rel="noreferrer"
+            className={buttonVariants({ variant: "ghost" })}
           >
-            Sign in
-          </Link>
+            better-auth.com/docs
+            <ArrowUpRight data-icon="inline-end" />
+          </a>
         </div>
       </header>
 

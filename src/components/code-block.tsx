@@ -95,7 +95,7 @@ export function CodeBlock({ files, defaultTitle, className }: CodeBlockProps) {
               className="gap-2"
             >
               <FileIcon fileName={title} />
-              <span className="hidden sm:inline">{title}</span>
+              <span>{title}</span>
             </Button>
           ))}
         </div>
